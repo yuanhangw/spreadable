@@ -1,6 +1,6 @@
 class Spread < ActiveRecord::Base
   attr_accessible :body, :title
-  has_many :spreads , :as => :spreadable 
+  has_many :spreads , :as => :spreadable
   belongs_to :spreadable , :polymorphic => true
 
 
