@@ -1,0 +1,15 @@
+<h1><%= @event.title %></h1>
+
+<div align ="center" >
+	<%= @event.body %>	
+</div>
+
+<p align = "center">--------SNO Spreads---------<hp>
+
+
+<p align ="center"><%= link_to 'Spread the Event', new_event_spread_path(@event) %></p>
+
+
+<ul class = "spread_list">
+	<%= render :partial =>'spreads/spread', :collection =>@event.spreads %>
+</ul>

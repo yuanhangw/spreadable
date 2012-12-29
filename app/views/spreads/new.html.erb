@@ -1,0 +1,31 @@
+<% provide(:title, 'Spread') %>
+<h1>New Spread</h1>
+
+<p align = "center">----------------SNO Spreads----------------<hp>
+</P>
+
+<h2><%= @parent.title %></h2>
+
+<div align ="center" >
+	<%= @parent.body %>	
+</div>
+
+<p align = "center">----------------SNO Spreads----------------<hp>
+</P>
+
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for [@parent, @spread] do |f| %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :body %>
+      <%= f.text_field :body %>
+
+
+      <%= f.submit "go beast go", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

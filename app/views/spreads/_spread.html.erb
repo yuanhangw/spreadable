@@ -1,0 +1,18 @@
+<li class="spread">
+  <h3><%= spread.title %>
+  <small>    
+    <%= link_to 'spread it!', new_spread_spread_path(spread) %>
+  </small>
+  </h3>
+
+  <div class="body">
+    <%= spread.body %>
+  </div>
+  
+
+  <% unless spread.spreads.empty? %>
+    <ul class="spread_list">
+      <%= render :partial => 'spreads/spread', :collection => spread.spreads %>
+    </ul>
+  <% end %>
+</li>
